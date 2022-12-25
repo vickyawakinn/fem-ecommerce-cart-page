@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ecommerce Cart</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="style_reset.css" />
+        <script src="main.js" defer></script>
+        <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png" />
+    </head>
+    <body>
+        <!-- navigation component -->
+
+        <header>
+            <div class="container">
+                <div class="nav-bar flex">
+                    <div class="main-nav flex">
+                        <div class="nav-icon" id="nav-open">
+                            <svg class="icon">
+                                <use
+                                    xlink:href="images/icons-images.svg#icon-menu"
+                                ></use>
+                            </svg>
+                        </div>
+                        <div class="nav-logo">sneakers</div>
+                        <nav>
+                            <ul class="nav-list flex" role="list">
+                                <li class="nav-item nav-icon" id="nav-close">
+                                    <svg class="icon">
+                                        <use
+                                            xlink:href="images/icons-images.svg#icon-close"
+                                        ></use>
+                                    </svg>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Collections</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Men</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Women</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="sec-nav flex">
+                        <div class="cart">
+                            <div class="cart-logo">
+                                <svg class="icon" id="cart-btn">
+                                    <use
+                                        xlink:href="images/icons-images.svg#icon-cart"
+                                    ></use>
+                                </svg>
+                                <span class="cart-items-badge">0</span>
+                            </div>
+                            <div class="cart-modal hide">
+                                <div class="cart-header">
+                                    <p>Cart</p>
+                                </div>
+                                <div class="cart-empty">
+                                    <p>Your cart is empty.</p>
+                                </div>
+                                <div class="cart-body">
+                                    <div class="cart-body-desc">
+                                        <div class="cart-body-img">
+                                            <img
+                                                src="images/image-product-1-thumbnail.jpg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div class="cart-body-detail">
+                                            <p class="cart-body-title">
+                                                Fall Limited Edition Sneakers
+                                            </p>
+                                            <p class="cart-body-price">
+                                                $125.00 x 3 <b>$375.00</b>
+                                            </p>
+                                        </div>
+                                        <div class="cart-body-delete">
+                                            <svg class="icon">
+                                                <use
+                                                    xlink:href="images/icons-images.svg#icon-delete"
+                                                ></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="cart-body-checkout">
+                                        <button class="main-btn">
+                                            Checkout
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-logo">
+                            <img src="images/image-avatar.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- body component -->
+
+        <main>
+            <div class="container">
+                <div class="product flex">
+                    <div class="product-showcase">
+                        <div class="carousel">
+                            <div class="product-main-image flex">
+                                <div class="carousel-btn flex">
+                                    <div
+                                        class="carousel-icon"
+                                        id="carousel-icon-prev"
+                                    >
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="images/icons-images.svg#icon-previous"
+                                            ></use>
+                                        </svg>
+                                    </div>
+                                    <div
+                                        class="carousel-icon"
+                                        id="carousel-icon-next"
+                                    >
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="images/icons-images.svg#icon-next"
+                                            ></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img
+                                    src="images/image-product-1.jpg"
+                                    alt=""
+                                    id="picture-in-display"
+                                />
+                            </div>
+
+                            <div class="product-image-gallery flex">
+                                <div class="product-image-gallery-item active">
+                                    <img
+                                        src="images/image-product-1-thumbnail.jpg"
+                                        alt=""
+                                        data-img-id="1"
+                                    />
+                                </div>
+                                <div class="product-image-gallery-item">
+                                    <img
+                                        src="images/image-product-2-thumbnail.jpg"
+                                        alt=""
+                                        data-img-id="2"
+                                    />
+                                </div>
+                                <div class="product-image-gallery-item">
+                                    <img
+                                        src="images/image-product-3-thumbnail.jpg"
+                                        alt=""
+                                        data-img-id="3"
+                                    />
+                                </div>
+                                <div class="product-image-gallery-item">
+                                    <img
+                                        src="images/image-product-4-thumbnail.jpg"
+                                        alt=""
+                                        data-img-id="4"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-description">
+                        <div>
+                            <p class="product-type">sneaker company</p>
+                            <h1 class="product-title">
+                                Fall Limited Edition Sneakers
+                            </h1>
+                            <p class="product-detail">
+                                These low-profile sneakers are your perfect
+                                casual wear companion. Featuring a durable
+                                rubber outer sole, they'll withstand everything
+                                the weather can offer.
+                            </p>
+                            <div class="product-price">
+                                <span class="product-selling-price"
+                                    >$125.00</span
+                                >
+                                <span class="product-discount">50%</span>
+                                <span class="product-initial-price"
+                                    >$250.00</span
+                                >
+                            </div>
+                            <div class="add-product flex">
+                                <div class="product-counter flex">
+                                    <button class="counter-btn">
+                                        <img
+                                            src="images/icon-minus.svg"
+                                            alt=""
+                                            id="decrement-btn"
+                                        />
+                                    </button>
+                                    <span class="counter-display">0</span>
+                                    <button class="counter-btn">
+                                        <img
+                                            src="images/icon-plus.svg"
+                                            alt=""
+                                            id="increment-btn"
+                                        />
+                                    </button>
+                                </div>
+                                <div class="product-add-to-cart">
+                                    <button
+                                        class="main-btn"
+                                        id="add-to-cart-btn"
+                                    >
+                                        <svg class="icon">
+                                            <use
+                                                xlink:href="images/icons-images.svg#icon-cart"
+                                            ></use>
+                                        </svg>
+                                        <span class="product-add-to-cart-btn"
+                                            >Add to cart</span
+                                        >
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="overlay-carousel">
+            <div class="main-carousel">
+                <span class="cancel-carousel">
+                    <svg class="icon">
+                        <use
+                            xlink:href="images/icons-images.svg#icon-close"
+                        ></use>
+                    </svg>
+                </span>
+                <div class="main-product-main-image flex">
+                    <div class="main-carousel-btn flex">
+                        <div
+                            class="main-carousel-icon"
+                            id="main-carousel-icon-prev"
+                        >
+                            <svg class="icon">
+                                <use
+                                    xlink:href="images/icons-images.svg#icon-previous"
+                                ></use>
+                            </svg>
+                        </div>
+                        <div
+                            class="main-carousel-icon"
+                            id="main-carousel-icon-next"
+                        >
+                            <svg class="icon">
+                                <use
+                                    xlink:href="images/icons-images.svg#icon-next"
+                                ></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <img
+                        src="images/image-product-1.jpg"
+                        alt=""
+                        id="picture-in-display-overlay"
+                    />
+                </div>
+                <div class="main-product-image-gallery flex">
+                    <div class="main-product-image-gallery-item active">
+                        <img
+                            src="images/image-product-1-thumbnail.jpg"
+                            alt=""
+                            data-img-id="1"
+                        />
+                    </div>
+                    <div class="main-product-image-gallery-item">
+                        <img
+                            src="images/image-product-2-thumbnail.jpg"
+                            alt=""
+                            data-img-id="2"
+                        />
+                    </div>
+                    <div class="main-product-image-gallery-item">
+                        <img
+                            src="images/image-product-3-thumbnail.jpg"
+                            alt=""
+                            data-img-id="3"
+                        />
+                    </div>
+                    <div class="main-product-image-gallery-item">
+                        <img
+                            src="images/image-product-4-thumbnail.jpg"
+                            alt=""
+                            data-img-id="4"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
